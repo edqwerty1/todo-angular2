@@ -33,17 +33,7 @@ System.register(['angular2/core', './todo-store.service'], function(exports_1, c
             AddTodoComponent = __decorate([
                 core_1.Component({
                     selector: 'add-todo',
-                    template: `
-    <form (ngSubmit)="onSubmit()" #todoForm="ngForm">
-    <div class="form-group row">
-    <label for="inputmessage">message: </label>
-    <input required [(ngModel)]="message" placeholder="your message here" ngControl="inputmessage" 
-     #inputmessage="ngForm" class="form-control"/>
-    <div [hidden]="inputmessage.valid" class="alert alert-danger"> Message required</div>
-    <button type="submit" class="btn btn-default">Add</button>
-  </div>
-    </form>
-  `
+                    templateUrl: 'app/add-todo.component.html'
                 }), 
                 __metadata('design:paramtypes', [todo_store_service_1.TodoStoreService])
             ], AddTodoComponent);

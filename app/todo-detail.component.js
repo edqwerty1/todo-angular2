@@ -27,9 +27,9 @@ System.register(['angular2/core', './remove-todo.component'], function(exports_1
                 core_1.Component({
                     selector: 'todo-detail',
                     template: `
-  <div class="row">
-    <div>{{todo.message}}</div>
-    <remove-todo [todo]="todo"></remove-todo>
+  <div class="input-group ">
+    <input [disabled]="true" [(ngModel)]="todo.message" type="text" class="form-control">
+    <remove-todo class="input-group-btn" [todo]="todo"></remove-todo>
   </div>
   `,
                     inputs: ['todo'],

@@ -5,7 +5,9 @@ import todo = require('./todo');
 @Component({
   selector: 'remove-todo',
   template: `
-    <button (click)="remove()">Remove</button>
+  
+    <button class="btn btn-default" type="button" (click)="remove()">Remove</button>
+  
   `,
    inputs: ['todo']
 })

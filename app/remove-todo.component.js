@@ -33,7 +33,9 @@ System.register(['angular2/core', './todo-store.service'], function(exports_1, c
                 core_1.Component({
                     selector: 'remove-todo',
                     template: `
-    <button (click)="remove()">Remove</button>
+  
+    <button class="btn btn-default" type="button" (click)="remove()">Remove</button>
+  
   `,
                     inputs: ['todo']
                 }), 

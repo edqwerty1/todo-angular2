@@ -6,8 +6,12 @@ import {Observable} from 'rxjs/RX';
 @Component({
   selector: 'todo-list',
   template: `
-  <div *ngFor="#todo of todos | async"> 
-    <todo-detail [todo]="todo"></todo-detail>
+  <div class=" col-lg-6">
+  <ul class="list-group ">
+  <li class="list-group-item" *ngFor="#todo of todos | async" > 
+    <todo-detail  [todo]="todo"></todo-detail>
+    </li>
+    </ul>
     </div>
   `,
    directives: [TodoDetailComponent]

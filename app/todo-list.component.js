@@ -39,8 +39,12 @@ System.register(['angular2/core', './todo-detail.component', './todo-store.servi
                 core_1.Component({
                     selector: 'todo-list',
                     template: `
-  <div *ngFor="#todo of todos | async"> 
-    <todo-detail [todo]="todo"></todo-detail>
+  <div class=" col-lg-6">
+  <ul class="list-group ">
+  <li class="list-group-item" *ngFor="#todo of todos | async" > 
+    <todo-detail  [todo]="todo"></todo-detail>
+    </li>
+    </ul>
     </div>
   `,
                     directives: [todo_detail_component_1.TodoDetailComponent]

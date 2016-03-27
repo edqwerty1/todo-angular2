@@ -41,10 +41,13 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/add/operator/map', './t
                 core_1.Component({
                     selector: 'my-app',
                     template: `
+  <div class="container body-content">
     <h1>{{title}}</h1>
-    <todo-list></todo-list>
     <add-todo></add-todo>
-  `,
+    <div class="col-lg-12"> </div>
+    <todo-list></todo-list>
+    
+  </div>`,
                     styleUrls: ['app/app.component.css'],
                     providers: [
                         http_1.HTTP_PROVIDERS,
