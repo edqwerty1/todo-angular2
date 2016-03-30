@@ -38,15 +38,7 @@ System.register(['angular2/core', './todo-detail.component', './todo-store.servi
             TodoListComponent = __decorate([
                 core_1.Component({
                     selector: 'todo-list',
-                    template: `
-  <div class=" col-lg-6">
-  <ul class="list-group ">
-  <li class="list-group-item" *ngFor="#todo of todos | async" > 
-    <todo-detail  [todo]="todo"></todo-detail>
-    </li>
-    </ul>
-    </div>
-  `,
+                    templateUrl: 'app/todo-list.component.html',
                     directives: [todo_detail_component_1.TodoDetailComponent]
                 }), 
                 __metadata('design:paramtypes', [todo_store_service_1.TodoStoreService])

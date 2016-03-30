@@ -31,7 +31,6 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/add/operator/map', './t
                 add_todo_component_1 = add_todo_component_1_1;
             }],
         execute: function() {
-            ;
             let AppComponent = class AppComponent {
                 constructor() {
                     this.title = 'To Do List Implemented with Angular 2.0';
@@ -40,14 +39,7 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/add/operator/map', './t
             AppComponent = __decorate([
                 core_1.Component({
                     selector: 'my-app',
-                    template: `
-  <div class="container body-content">
-    <h1>{{title}}</h1>
-    <add-todo></add-todo>
-    <div class="col-lg-12"> </div>
-    <todo-list></todo-list>
-    
-  </div>`,
+                    templateUrl: 'app/app.component.html',
                     styleUrls: ['app/app.component.css'],
                     providers: [
                         http_1.HTTP_PROVIDERS,

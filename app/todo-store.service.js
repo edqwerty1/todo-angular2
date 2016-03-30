@@ -34,6 +34,7 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/RX', 'rxjs/add/operator
                         .startWith(this._dataStore.todos)
                         .share();
                 }
+                ;
                 loadTodos() {
                     this._http.get('http://localhost:8080/api/todos')
                         .map((res) => res.json())
@@ -42,6 +43,7 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/RX', 'rxjs/add/operator
                         this._todosObserver.next(this._dataStore.todos);
                     }, error => console.log(error));
                 }
+                ;
                 removeToDos(id) {
                     this._http.delete(`http://localhost:8080/api/todos/${id}`)
                         .subscribe(response => {
