@@ -59,7 +59,7 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/RX', 'rxjs/add/operator
                 addTodo(message) {
                     var headers = new http_1.Headers();
                     headers.append('Content-Type', 'application/json');
-                    this._http.post(`http://localhost:8080/api/todos/`, JSON.stringify({ "message": message }), { headers: headers })
+                    this._http.post(`http://localhost:8080/api/todos/`, JSON.stringify({ 'message': message }), { headers: headers })
                         .map(response => response.json())
                         .subscribe(data => {
                         this._dataStore.todos.push(data);
@@ -76,4 +76,5 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/RX', 'rxjs/add/operator
         }
     }
 });
+
 //# sourceMappingURL=todo-store.service.js.map

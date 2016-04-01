@@ -1,4 +1,4 @@
-System.register(['angular2/core', './todo-detail.component', './todo-store.service'], function(exports_1, context_1) {
+System.register(['angular2/core', './todo-store.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,41 +10,36 @@ System.register(['angular2/core', './todo-detail.component', './todo-store.servi
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, todo_detail_component_1, todo_store_service_1;
-    var TodoListComponent;
+    var core_1, todo_store_service_1;
+    var AddTodoComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (todo_detail_component_1_1) {
-                todo_detail_component_1 = todo_detail_component_1_1;
-            },
             function (todo_store_service_1_1) {
                 todo_store_service_1 = todo_store_service_1_1;
             }],
         execute: function() {
-            let TodoListComponent = class TodoListComponent {
+            let AddTodoComponent = class AddTodoComponent {
                 constructor(_todoStore) {
                     this._todoStore = _todoStore;
                 }
-                ngOnInit() {
-                    this.todos = this._todoStore.todos$;
-                    this._todoStore.loadTodos();
-                    console.log(this.todos);
-                    this.todos.subscribe(data => console.log(data));
+                onSubmit() {
+                    this._todoStore.addTodo(this.message);
+                    this.message = '';
                 }
             };
-            TodoListComponent = __decorate([
+            AddTodoComponent = __decorate([
                 core_1.Component({
-                    selector: 'todo-list',
-                    templateUrl: 'app/todo-list.component.html',
-                    directives: [todo_detail_component_1.TodoDetailComponent]
+                    selector: 'add-todo',
+                    templateUrl: 'app/add-todo.component.html'
                 }), 
                 __metadata('design:paramtypes', [todo_store_service_1.TodoStoreService])
-            ], TodoListComponent);
-            exports_1("TodoListComponent", TodoListComponent);
+            ], AddTodoComponent);
+            exports_1("AddTodoComponent", AddTodoComponent);
         }
     }
 });
-//# sourceMappingURL=todo-list.component.js.map
+
+//# sourceMappingURL=add-todo.component.js.map

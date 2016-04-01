@@ -1,8 +1,8 @@
 import urls = require('./url');
 
-export interface ITodo{
+export interface ITodo {
     id: number;
-    message: string; 
+    message: string;
     createdDateTime: Date;
-    urls: urls.IUrl[]
+    urls: urls.IUrl[];
 }

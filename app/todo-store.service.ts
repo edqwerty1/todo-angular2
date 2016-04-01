@@ -26,7 +26,7 @@ export class TodoStoreService {
             .map((res: Response) => res.json())
             .subscribe(data => {
                 this._dataStore.todos = data.todos;
-                this._todosObserver.next(this._dataStore.todos)
+                this._todosObserver.next(this._dataStore.todos);
             },
             error => console.log(error)
             );
@@ -39,13 +39,13 @@ export class TodoStoreService {
                     if (t.id === id) { this._dataStore.todos.splice(index, 1); }
                 });
                 this._todosObserver.next(this._dataStore.todos);
-            }, error => console.log(error))
+            }, error => console.log(error));
     };
 
     addTodo(message: string) {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
-        this._http.post(`http://localhost:8080/api/todos/`, JSON.stringify({ "message": message }), { headers: headers })
+        this._http.post(`http://localhost:8080/api/todos/`, JSON.stringify({ 'message': message }), { headers: headers })
             .map(response => response.json())
             .subscribe(data => {
                 this._dataStore.todos.push(data);
