@@ -3,7 +3,7 @@
 requires the [Todo-Server](https://github.com/edqwerty1/todo-server)
 
 npm install
-npm start
+gulp 
 
 
 https://coryrylan.com/blog/angular-2-observable-data-services
