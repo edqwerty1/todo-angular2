@@ -1,5 +1,5 @@
 import { Component } from 'angular2/core';
-import todo = require('./todo');
+import todo = require('./models/todo');
 import { RemoveTodoComponent} from './remove-todo.component';
 
 @Component({

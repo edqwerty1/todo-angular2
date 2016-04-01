@@ -39,7 +39,7 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/RX', 'rxjs/add/operator
                     this._http.get('http://localhost:8080/api/todos')
                         .map((res) => res.json())
                         .subscribe(data => {
-                        this._dataStore.todos = data.Todos;
+                        this._dataStore.todos = data.todos;
                         this._todosObserver.next(this._dataStore.todos);
                     }, error => console.log(error));
                 }

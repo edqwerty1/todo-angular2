@@ -1,5 +1,5 @@
 import { Component, OnInit } from 'angular2/core';
-import todo = require('./todo');
+import todo = require('./models/todo');
 import { TodoDetailComponent} from './todo-detail.component';
 import { TodoStoreService } from './todo-store.service';
 import {Observable} from 'rxjs/RX';

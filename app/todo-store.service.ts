@@ -1,7 +1,5 @@
-import todos = require('./todos');
-import todo = require('./todo');
+import {ITodo} from './models/todo';
 import { Injectable } from 'angular2/core';
-import {TODOS} from './mock-todos';
 import {Http, Response, Headers} from 'angular2/http';
 import {Observable, Observer} from 'rxjs/RX';
 import 'rxjs/add/operator/share';
@@ -9,10 +7,10 @@ import 'rxjs/add/operator/startWith';
 
 @Injectable()
 export class TodoStoreService {
-    todos$: Observable<todo.ITodo[]>;
-    private _todosObserver: Observer<todo.ITodo[]>;
+    todos$: Observable<ITodo[]>;
+    private _todosObserver: Observer<ITodo[]>;
     private _dataStore: {
-        todos: todo.ITodo[];
+        todos: ITodo[];
     };
 
     constructor(private _http: Http) {
@@ -27,7 +25,7 @@ export class TodoStoreService {
         this._http.get('http://localhost:8080/api/todos')
             .map((res: Response) => res.json())
             .subscribe(data => {
-                this._dataStore.todos = data.Todos;
+                this._dataStore.todos = data.todos;
                 this._todosObserver.next(this._dataStore.todos)
             },
             error => console.log(error)

@@ -1,6 +1,6 @@
 import { Component } from 'angular2/core';
 import { TodoStoreService } from './todo-store.service';
-import todo = require('./todo');
+import todo = require('./models/todo');
 
 @Component({
     selector: 'remove-todo',

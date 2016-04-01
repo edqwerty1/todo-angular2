@@ -1,5 +1,5 @@
-import todos = require('./todos');
-import todo = require('./todo');
+import todos = require('./models/todos');
+import todo = require('./models/todo');
 
 export var TODOS: todos.ITodos = {
     "todos": [{
